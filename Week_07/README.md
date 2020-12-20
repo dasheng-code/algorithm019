@@ -108,23 +108,23 @@
 -----------------
 
     //定义首尾两个集合
-   Set<String> beginSet = new HashSet<>();
-       beginSet.add(beginWord);
-       Set<String> endSet = new HashSet<>();
-       endSet.add(endWord);
-       Set<String> flag = new HashSet<>();
-       int len =1;
-       while(!beginSet.isEmpty() && !endSet.isEmpty()){
-          //从集合数最少的开始遍历
-           if(beginSet.size() > endSet.size()){
-               Set<String> set = beginSet;
-               beginSet = endSet;
-               endSet = set;
-           }
-           Set<String> temp = new HashSet<>();
-           for(String word : beginSet){
-                .......
-                //判断首集合的元素在尾集合中就返回结束
-                 if(endSet.contains(next)) return len+1;
-            }
-  }
+       Set<String> beginSet = new HashSet<>();
+           beginSet.add(beginWord);
+           Set<String> endSet = new HashSet<>();
+           endSet.add(endWord);
+           Set<String> flag = new HashSet<>();
+           int len =1;
+           while(!beginSet.isEmpty() && !endSet.isEmpty()){
+              //从集合数最少的开始遍历
+               if(beginSet.size() > endSet.size()){
+                   Set<String> set = beginSet;
+                   beginSet = endSet;
+                   endSet = set;
+               }
+               Set<String> temp = new HashSet<>();
+               for(String word : beginSet){
+                    .......
+                    //判断首集合的元素在尾集合中就返回结束
+                     if(endSet.contains(next)) return len+1;
+                }
+      }
